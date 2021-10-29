@@ -23,12 +23,12 @@ Web App: ReactJS
 
 ## Team
 
-    - Dakshesh Jain
-    - Lavanya Gokhale
-    - Priyansh Jha
-    - Gaddam Shreyas
+- Dakshesh Jain
+- Lavanya Gokhale
+- Priyansh Jha
+- Gaddam Shreyas
 
 
-    We are all residents of Raipur, Chhattisgarh and II year CSE students currently pursuing B.Tech at Shri Shankaracharya Institute Of Professional Management And Technology.
+We are all residents of Raipur, Chhattisgarh and II year CSE students currently pursuing B.Tech at Shri Shankaracharya Institute Of Professional Management And Technology.
 
 
