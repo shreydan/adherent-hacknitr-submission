@@ -45,5 +45,8 @@ class Event(models.Model):
 
     date_time = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ('-id',)
+
     def __str__(self):
         return f"{self.username} added {self.title}"
