@@ -17,7 +17,11 @@ ___
 ## Tech-Stack
 
 Backend: Python Django
+
+Database: postgresql
+
 Mobile App: Flutter
+
 Web App: ReactJS
 
 
@@ -25,7 +29,7 @@ Web App: ReactJS
 
 - Dakshesh Jain
 - Lavanya Gokhale
-- Priyansh Jha
+- Priyansh Sharma
 - Gaddam Shreyas
 
 
