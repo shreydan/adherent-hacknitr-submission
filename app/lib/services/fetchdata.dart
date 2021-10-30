@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 
 import '../model/eventsmodel.dart';
@@ -7,10 +8,12 @@ class EventsItem {
   List<Result> events = [];
   bool hasMore = true;
 
-  Future<void> getEvents() async {
-    var url = Uri.parse("https://adherent.herokuapp.com/api/events");
+  Future<void> getEvents({page = 1}) async {
+    var url = Uri.parse("https://adherent.herokuapp.com/api/events?$page");
 
-    var response = await http.get(url);
+    var response = await http.get(url, headers: {
+      HttpHeaders.contentTypeHeader: 'application/json',
+    });
 
     if (response.statusCode == 200) {
       var jsonData = jsonDecode(response.body);

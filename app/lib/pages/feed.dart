@@ -55,12 +55,14 @@ class _QuotelistState extends State<Quotelist> {
         child: Text('post'),
         backgroundColor: Colors.amber,
       ),
-      body: ListView.builder(
-          itemCount: events.length,
-          shrinkWrap: true,
-          itemBuilder: (context, index) {
-            return quoteCard(quote: events[index]);
-          }),
+      body: _loading
+          ? Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              itemCount: events.length,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return quoteCard(quote: events[index]);
+              }),
     );
   }
 }
