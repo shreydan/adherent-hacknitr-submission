@@ -21,13 +21,15 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'>
-          {loggedIn ? <Redirect to="/feed" /> : <Redirect to="/login" />}
+          {/* {loggedIn ? <Redirect to="/feed" /> : <Redirect to="/login" />} */}
           </Route>
           <Route exact path='/login'>
-          {loggedIn ? <Redirect to="/feed" /> : <Login />}
+          {/* {loggedIn ? <Redirect to="/feed" /> : <Login />} */}
+          <Login />
           </Route>
           <Route exact path='/feed'>
-          {loggedIn ? <Feed /> : <Redirect to="/login" />}
+          {/* {loggedIn ? <Feed /> : <Redirect to="/login" />} */}
+          <Feed />
           </Route>
         </Switch>
       </Router>
