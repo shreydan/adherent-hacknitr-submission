@@ -17,9 +17,12 @@ class LoginPage extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 80,),
+            SizedBox(
+              height: 80,
+            ),
             Header(),
-            Expanded(child: Container(
+            Expanded(
+                child: Container(
               decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(
@@ -29,8 +32,7 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(40),
                     topRight: Radius.circular(40),
-                  )
-              ),
+                  )),
               child: InputWrapper(),
             ))
           ],

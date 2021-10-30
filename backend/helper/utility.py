@@ -35,7 +35,12 @@ def get_city_id(lat, lon):
         cityId = features[0]["id"].replace("district.", "")
         cityName = features[0]["text"]
 
-    return cityId, cityName
+    result = {
+        "cityId": cityId,
+        "cityName": cityName,
+    }
+
+    return results
 
 
 def get_area_detail(lat, lon):
