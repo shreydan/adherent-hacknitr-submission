@@ -33,8 +33,9 @@ def get_city_id(lat, lon):
 
     else:
         cityId = features[0]["id"].replace("district.", "")
+        cityName = features[0]["text"]
 
-    return cityId
+    return cityId, cityName
 
 
 def get_area_detail(lat, lon):

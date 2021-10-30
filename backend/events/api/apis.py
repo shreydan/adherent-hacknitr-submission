@@ -30,9 +30,14 @@ class EventsAPI(ListCreateAPIView):
         longitude = self.request.GET.get("longitude")
 
         if latitude and longitude:
-            cityId = get_city_id(latitude, longitude)
+            cityId, cityName = get_city_id(latitude, longitude)
             if cityId == None:
                 return Event.objects.none()
-            return Event.objects.filter(city__city_id=cityId).distinct()
+
+            city, _ = City.objects.get_or_create(
+                city_id=cityId,
+                city_name=cityName
+            )
+            return Event.objects.get_or_create(city=city).distinct()
         else:
             return Event.objects.all()
