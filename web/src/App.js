@@ -8,17 +8,27 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Feed from "./pages/Feed";
 
+import { checkLogin } from "./hooks/useLogin";
+
 import "./css/styles.css";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
+  const loggedIn = checkLogin()
   return (
     <div>
       <Router>
         <Switch>
-          <Route path="/login" exact component={Login} />
-          <Route path="/feed" exact component={Feed} />
+          <Route exact path='/'>
+          {loggedIn ? <Redirect to="/feed" /> : <Redirect to="/login" />}
+          </Route>
+          <Route exact path='/login'>
+          {loggedIn ? <Redirect to="/feed" /> : <Login />}
+          </Route>
+          <Route exact path='/feed'>
+          {loggedIn ? <Feed /> : <Redirect to="/login" />}
+          </Route>
         </Switch>
       </Router>
     </div>
