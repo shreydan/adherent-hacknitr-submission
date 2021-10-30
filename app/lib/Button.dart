@@ -1,12 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:app/pages/feed.dart';
 import 'package:app/pages/quote.dart';
 
-class Button extends StatelessWidget{
+class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Container(
         height: 50,
         margin: EdgeInsets.symmetric(horizontal: 50),
@@ -17,22 +15,18 @@ class Button extends StatelessWidget{
         child: Center(
           child: RaisedButton(
               color: Colors.purpleAccent,
-              child: Text("               JOIN             ",style: TextStyle(
-                  color: Colors.white,
-                  fontSize:20,
-                  fontWeight: FontWeight.bold
-              ),
+              child: Text(
+                "JOIN",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(
-                    MaterialPageRoute(
-                      builder: (context) => Quotelist(),
-                    )
-                );
-              }
-          ),
-        )
-    );
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => Quotelist(),
+                ));
+              }),
+        ));
   }
 }
