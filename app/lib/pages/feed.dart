@@ -44,7 +44,7 @@ class _QuotelistState extends State<Quotelist> {
       });
     }
 
-    return eventItemClass.hasMore;
+    return hasMore;
   }
 
   final RefreshController refreshControl =
