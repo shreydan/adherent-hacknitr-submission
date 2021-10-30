@@ -1,19 +1,26 @@
 import React from "react";
+import '../css/styles.css'
 
 export default function Login() {
   return (
-    
-    <div className="container" style={{backgroundColor:"blue"}}>
-     <div > 
-     <div class="card" style={{width: "18rem"}}>
-  <div class="card-body" style={{backgroundColor:"black"}}>
-    <h5 class="card-title">Card title</h5>
-    <span class="input-group-text mb-3" style={{width:"2rem"}}>@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>  
-    <a href="/" class="btn btn-primary">Join</a>
-  </div>
-</div>
-       </div>     
-    </div>  
-    )
+    <div className="login_container fluid-container">
+      
+        <h2 class="welcome_header mb-5">Welcome to Adherent</h2>
+        <div class="card w-25 login_card py-4">
+          <div class="card-body">
+            <input
+              type="text"
+              class="form-control px-2 py-3"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+            <a href="/" class="btn btn-primary w-100 mt-2 p-2">
+              JOIN
+            </a>
+          </div>
+        </div>
+      
+    </div>
+  );
 }

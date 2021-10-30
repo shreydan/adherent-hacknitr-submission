@@ -14,15 +14,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div>
       <Router>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/feed" exact component={Feed} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 
