@@ -1,0 +1,17 @@
+.login_container {
+    background-color: rgb(111, 32, 185);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.login_card {
+    background-color: #353535;
+}
+
+.welcome_header {
+    color: white;
+}
+
