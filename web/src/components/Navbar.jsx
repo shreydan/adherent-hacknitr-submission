@@ -7,7 +7,7 @@ export default memo(function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          Navbar
+          Adherent
         </NavLink>
         <button
           className="navbar-toggler"
@@ -20,15 +20,7 @@ export default memo(function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/">
-                Home
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+        
       </div>
     </nav>
   );
