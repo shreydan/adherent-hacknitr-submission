@@ -1,7 +1,7 @@
+import 'package:app/pages/update.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../update.dart';
 
 class List extends StatefulWidget {
   @override

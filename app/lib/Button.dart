@@ -1,4 +1,4 @@
-import 'package:adherent/pages/home.dart';
+import 'package:app/pages/home.dart';
 import 'package:flutter/material.dart';
 //import 'package:adherent/pages/feed.dart';
 //import 'package:adherent/pages/quote.dart';

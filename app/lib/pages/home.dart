@@ -1,4 +1,4 @@
-import 'package:adherent/pages/post.dart';
+import 'package:app/pages/post.dart';
 import 'package:flutter/material.dart';
 
 import 'body.dart';

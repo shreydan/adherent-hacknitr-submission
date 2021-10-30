@@ -1,3 +1,5 @@
+import 'package:app/pages/splashscreen.dart';
+
 import 'loginid.dart';
 import 'package:flutter/material.dart';
 

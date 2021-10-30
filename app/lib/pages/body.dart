@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:adherent/pages/list.dart';
+import 'package:app/pages/list.dart';
 
 class Body extends StatelessWidget {
   @override
