@@ -10,9 +10,9 @@ class LoginPage extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-            Colors.lightBlue,
-            Colors.lightBlue,
-            Colors.lightBlue,
+            Colors.purple,
+            Colors.purple,
+            Colors.purple,
           ]),
         ),
         child: Column(
@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
             Header(),
             Expanded(child: Container(
               decoration: BoxDecoration(
-                  color: Colors.blueGrey.shade800,
+                  color: Colors.white,
                   border: Border.all(
                     color: Colors.blueGrey.shade100,
                     width: 0,

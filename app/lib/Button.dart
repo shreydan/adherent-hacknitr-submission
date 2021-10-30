@@ -1,7 +1,7 @@
-import 'package:app/pages/home.dart';
+
 import 'package:flutter/material.dart';
-//import 'package:adherent/pages/feed.dart';
-//import 'package:adherent/pages/quote.dart';
+import 'package:app/pages/feed.dart';
+import 'package:app/pages/quote.dart';
 
 class Button extends StatelessWidget{
   @override
@@ -11,12 +11,12 @@ class Button extends StatelessWidget{
         height: 50,
         margin: EdgeInsets.symmetric(horizontal: 50),
         decoration: BoxDecoration(
-          color: Colors.lightBlueAccent,
+          color: Colors.purpleAccent,
           borderRadius: BorderRadius.circular(4),
         ),
         child: Center(
           child: RaisedButton(
-              color: Colors.lightBlueAccent,
+              color: Colors.purpleAccent,
               child: Text("               JOIN             ",style: TextStyle(
                   color: Colors.white,
                   fontSize:20,
@@ -27,7 +27,7 @@ class Button extends StatelessWidget{
                 Navigator.of(context)
                     .push(
                     MaterialPageRoute(
-                      builder: (context) => Home(),
+                      builder: (context) => Quotelist(),
                     )
                 );
               }
