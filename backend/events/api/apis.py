@@ -38,6 +38,6 @@ class EventsAPI(ListCreateAPIView):
                 city_id=cityId,
                 city_name=cityName
             )
-            return Event.objects.get_or_create(city=city).distinct()
+            return Event.objects.filter(city=city).distinct()
         else:
             return Event.objects.all()
