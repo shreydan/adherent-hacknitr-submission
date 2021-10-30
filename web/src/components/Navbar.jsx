@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default memo(function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container" style={{backgroundColor: "blue"}}>
+      <div className="container">
         <NavLink className="navbar-brand" to="/">
           Adherent
         </NavLink>
