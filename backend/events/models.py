@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
 class City(models.Model):
@@ -47,6 +48,9 @@ class Event(models.Model):
 
     class Meta:
         ordering = ('-id',)
+
+    def get_date_time(self):
+        return naturaltime(self.date_time)
 
     def __str__(self):
         return f"{self.username} added {self.title}"
