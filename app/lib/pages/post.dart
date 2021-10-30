@@ -31,7 +31,7 @@ class post extends StatelessWidget {
             child: TextField(
               controller: title,
               decoration: InputDecoration(
-                labelText: "TITLE",
+                labelText: "Title",
                 hintStyle: TextStyle(color: Colors.grey),
               ),
             ),
@@ -45,7 +45,7 @@ class post extends StatelessWidget {
               keyboardType: TextInputType.multiline,
               maxLines: null,
               decoration: InputDecoration(
-                labelText: "CONTENT",
+                labelText: "Content",
                 hintStyle: TextStyle(color: Colors.grey),
               ),
             ),
@@ -69,8 +69,8 @@ class post extends StatelessWidget {
                     "username": "Lavanya",
                     "title": title.text,
                     "content": content.text,
-                    "latitude": "81.6455",
-                    "longitude": "21.2110"
+                    "latitude": "81.6651",
+                    "longitude": "21.2378"
                   });
 
                   if (response.statusCode == 201) {
