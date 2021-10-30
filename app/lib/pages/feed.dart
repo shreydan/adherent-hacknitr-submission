@@ -1,8 +1,8 @@
 import 'package:app/pages/post.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-import 'quote.dart';
 import '../model/eventsmodel.dart';
 import '../services/fetchdata.dart';
 
@@ -19,7 +19,9 @@ class Quotelist extends StatefulWidget {
 
 class _QuotelistState extends State<Quotelist> {
   var events = <Result>[];
+  var pageNumber = 1;
   bool _loading = true;
+  bool hasMore = true;
 
   @override
   void initState() {
@@ -29,20 +31,31 @@ class _QuotelistState extends State<Quotelist> {
 
   getEvents() async {
     EventsItem eventItemClass = EventsItem();
-    await eventItemClass.getEvents();
-    events = eventItemClass.events;
 
-    setState(() {
-      _loading = false;
-    });
+    if (hasMore) {
+      await eventItemClass.getEvents(page: pageNumber);
+
+      events.addAll(eventItemClass.events);
+
+      setState(() {
+        _loading = false;
+        hasMore = eventItemClass.hasMore;
+        pageNumber = eventItemClass.hasMore ? pageNumber + 1 : pageNumber;
+      });
+    }
+
+    return hasMore;
   }
+
+  final RefreshController refreshControl =
+      RefreshController(initialRefresh: false);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('FEED'),
+        title: Text('FEEDS'),
         centerTitle: true,
         backgroundColor: Colors.purple,
       ),
@@ -56,13 +69,26 @@ class _QuotelistState extends State<Quotelist> {
         backgroundColor: Colors.amber,
       ),
       body: _loading
-          ? Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              itemCount: events.length,
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return quoteCard(quote: events[index]);
-              }),
+          ? const Center(child: CircularProgressIndicator())
+          : SmartRefresher(
+              controller: refreshControl,
+              enablePullUp: true,
+              enablePullDown: false,
+              onLoading: () async {
+                final result = await getEvents();
+                if (result) {
+                  refreshControl.loadComplete();
+                } else {
+                  refreshControl.loadFailed();
+                }
+              },
+              child: ListView.builder(
+                  itemCount: events.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return quoteCard(quote: events[index]);
+                  }),
+            ),
     );
   }
 }
