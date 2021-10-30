@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar/>
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/feed" exact component={Feed} />
