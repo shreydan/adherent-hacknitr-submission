@@ -73,8 +73,6 @@ class post extends StatelessWidget {
                     "content": content.text,
                     "latitude": "81.6651",
                     "longitude": "21.2378"
-                  }, headers: {
-                    HttpHeaders.contentTypeHeader: 'application/json',
                   });
 
                   if (response.statusCode == 201) {
