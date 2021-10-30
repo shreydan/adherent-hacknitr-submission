@@ -31,7 +31,7 @@ class _QuotelistState extends State<Quotelist> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[800],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('FEED'),
         centerTitle: true,
@@ -70,7 +70,7 @@ class quoteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
-      color: Colors.blueGrey[800],
+      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Column(
@@ -80,7 +80,7 @@ class quoteCard extends StatelessWidget {
                 quote.author,
                 style: TextStyle(
                   fontSize: 18.0,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               SizedBox(height: 3.0),
@@ -88,7 +88,7 @@ class quoteCard extends StatelessWidget {
                 quote.time,
                 style: TextStyle(
                   fontSize: 15.0,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               SizedBox(height: 4.0),
@@ -98,7 +98,7 @@ class quoteCard extends StatelessWidget {
                     quote.place,
                     style: TextStyle(
                       fontSize: 15.0,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   Icon(Icons.location_on_rounded,
@@ -112,7 +112,7 @@ class quoteCard extends StatelessWidget {
                 quote.text,
                 style: TextStyle(
                   fontSize: 25.0,
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -121,7 +121,7 @@ class quoteCard extends StatelessWidget {
                 quote.content,
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.white,
+                  color: Colors.blueGrey,
                 ),
               ),
               SizedBox(height: 50,),

@@ -11,12 +11,12 @@ class Button extends StatelessWidget{
         height: 50,
         margin: EdgeInsets.symmetric(horizontal: 50),
         decoration: BoxDecoration(
-          color: Colors.lightBlueAccent,
+          color: Colors.purpleAccent,
           borderRadius: BorderRadius.circular(4),
         ),
         child: Center(
           child: RaisedButton(
-              color: Colors.lightBlueAccent,
+              color: Colors.purpleAccent,
               child: Text("               JOIN             ",style: TextStyle(
                   color: Colors.white,
                   fontSize:20,
