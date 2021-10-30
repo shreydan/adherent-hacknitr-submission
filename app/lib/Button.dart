@@ -1,7 +1,7 @@
-import 'package:app/pages/home.dart';
+
 import 'package:flutter/material.dart';
-//import 'package:adherent/pages/feed.dart';
-//import 'package:adherent/pages/quote.dart';
+import 'package:app/pages/feed.dart';
+import 'package:app/pages/quote.dart';
 
 class Button extends StatelessWidget{
   @override
@@ -27,7 +27,7 @@ class Button extends StatelessWidget{
                 Navigator.of(context)
                     .push(
                     MaterialPageRoute(
-                      builder: (context) => Home(),
+                      builder: (context) => Quotelist(),
                     )
                 );
               }
